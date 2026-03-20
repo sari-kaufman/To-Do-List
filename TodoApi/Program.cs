@@ -130,4 +130,5 @@ app.MapDelete("/items/{id}", async (int id, ToDoDbContext db) =>
     return Results.NotFound();
 }).RequireAuthorization(); 
 
+app.MapGet("/", () => "ToDoList API is running!");
 app.Run();
