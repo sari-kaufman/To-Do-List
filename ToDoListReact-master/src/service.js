@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // הגדרת הכתובת של ה-API 
-axios.defaults.baseURL = "http://localhost:5035";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 // פונקציה מיוחדת שמוסיפה את הטוקן לכל הבקשות שלנו לשרת
 export const setAuthToken = (token) => {
